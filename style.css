@@ -1,126 +1,39 @@
-/* Estilos gerais */
 body {
-    font-family: 'Noto Serif JP', serif; /* Fonte com estilo japonês */
-    background-color: #f4f4f2;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
     color: #333;
     text-align: center;
-    padding: 40px;
-    background-image: url('https://images.unsplash.com/photo-1549890760-6a09c7b2f8e3');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 100vh;
+    padding: 20px;
 }
 
 main {
-    max-width: 700px;
+    max-width: 600px;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    padding: 30px;
-    backdrop-filter: blur(5px);
-    border: 3px solid #8B4513; /* Moldura para lembrar um pergaminho */
+    background-color: #fff;
     border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 .passo {
     display: none;
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
 }
 
 .passo.ativo {
     display: block;
-    opacity: 1;
-}
-
-h1 {
-    font-size: 2.5rem;
-    color: #8B4513;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.3rem;
-    color: #333;
-    line-height: 1.6;
-    font-style: italic;
 }
 
 .btn-proximo {
-    background-color: #8B4513;
+    background-color: #007BFF;
     color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 12px 25px;
+    padding: 10px 20px;
     cursor: pointer;
-    margin: 10px;
-    transition: background-color 0.4s ease, transform 0.3s ease;
-    font-weight: bold;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    margin: 5px;
+    transition: background-color 0.3s;
 }
 
 .btn-proximo:hover {
-    background-color: #B5651D;
-    transform: scale(1.05);
-}
-
-.btn-proximo:active {
-    background-color: #6B3F21;
-    transform: scale(0.98);
-}
-
-footer {
-    margin-top: 20px;
-    font-size: 0.8rem;
-    color: #555;
-}
-
-body::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: -1;
-}
-
-/* Estilo de efeitos de transição */
-.passo {
-    animation: fadein 1s;
-}
-
-@keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    main {
-        padding: 20px;
-        width: 100%;
-    }
-    
-    .btn-proximo {
-        width: 100%;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    p {
-        font-size: 1.1rem;
-    }
+    background-color: #0056b3;
 }
