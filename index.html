@@ -1,66 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Samurai</title>
+    <title>História Interativa: O Samurai</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
 <body>
-    <main>
-        <!-- Passo 0: Introdução -->
-        <div class="passo ativo" id="passo-0">
-            <p>Você é um grande samurai em batalha. Seu inimigo foi desarmado e deve se entregar. O que você fará?</p>
-            <button class="btn-proximo" data-proximo="1">Finalizá-lo</button>
-            <button class="btn-proximo" data-proximo="2">Ter misericórdia</button>
-        </div>
 
-        <!-- Passo 1: Finaliza-lo -->
-        <div class="passo" id="passo-1">
-            <p>Você finalizou seu inimigo. O irmão mais velho dele busca vingança. O que você fará?</p>
-            <button class="btn-proximo" data-proximo="3">Matá-lo</button>
-            <button class="btn-proximo" data-proximo="4">Ter misericórdia</button>
-        </div>
+<main>
+    <h1>História do Samurai</h1>
+    <div id="passo1" class="passo ativo">
+        <p>Você é um grande samurai, está em uma batalha contra um inimigo no qual, com um golpe, você o desarmou. Ele não pode continuar a luta e, segundo o código de honra dos samurais, ele deve se entregar, deixando que você o finalize.</p>
+        <button class="btn-proximo" onclick="proximoPasso(2)">1. Finalizá-lo</button>
+        <button class="btn-proximo" onclick="proximoPasso(3)">2. Ter misericórdia</button>
+    </div>
 
-        <!-- Passo 2: Ter misericórdia -->
-        <div class="passo" id="passo-2">
-            <p>Você teve misericórdia, mas o irmão mais velho comete seppuku. O que você fará?</p>
-            <button class="btn-proximo" data-proximo="5">Vingá-lo</button>
-            <button class="btn-proximo" data-proximo="6">Seguir seu caminho</button>
-        </div>
+    <div id="passo2" class="passo">
+        <p>Como consequência de ter matado aquele homem, o irmão mais velho dele quer vingar-se, e nessa luta você novamente sai vitorioso. Você novamente tem 2 escolhas:</p>
+        <button class="btn-proximo" onclick="proximoPasso(4)">1. Matá-lo</button>
+        <button class="btn-proximo" onclick="proximoPasso(5)">2. Ter misericórdia</button>
+    </div>
 
-        <!-- Passo 3: Mata-lo -->
-        <div class="passo" id="passo-3">
-            <p>O irmão mais velho é mestre de cinco jovens samurais. Eles vêm em busca de vingança. Você terá que lutar!</p>
-            <button class="btn-proximo" data-proximo="7">Lutar</button>
-        </div>
+    <div id="passo3" class="passo">
+        <p>Você deixa aquele homem voltar para casa com vida, porém, por não ter cumprido com o código de honra dos samurais, o clã decide matá-lo. Você tem 2 escolhas:</p>
+        <button class="btn-proximo" onclick="proximoPasso(6)">1. Vingá-lo</button>
+        <button class="btn-proximo" onclick="proximoPasso(7)">2. Seguir seu caminho</button>
+    </div>
 
-        <!-- Passo 4: Ter misericórdia -->
-        <div class="passo" id="passo-4">
-            <p>O irmão mais velho sabe o que acontecerá e comete seppuku. Você fica com a honra, mas a dor da perda.</p>
-            <button class="btn-proximo" data-proximo="0">Recomeçar</button>
-        </div>
+    <div id="passo4" class="passo">
+        <p>O irmão mais velho daquele homem era o mestre de 5 jovens samurais, eles querem vingar-se e você terá que lutar contra eles.</p>
+        <footer>Fim da História</footer>
+    </div>
 
-        <!-- Passo 5: Vingá-lo -->
-        <div class="passo" id="passo-5">
-            <p>Você decide vingar seu amigo. O irmão mais velho e seus cinco aprendizes vêm ao seu encontro!</p>
-            <button class="btn-proximo" data-proximo="7">Lutar</button>
-        </div>
+    <div id="passo5" class="passo">
+        <p>O irmão mais velho daquele homem sabe o que acontecerá se retornar para casa e comete seppuku.</p>
+        <footer>Fim da História</footer>
+    </div>
 
-        <!-- Passo 6: Seguir seu caminho -->
-        <div class="passo" id="passo-6">
-            <p>Você decide seguir seu caminho e continuar sua jornada como samurai em busca de novos duelos.</p>
-            <button class="btn-proximo" data-proximo="0">Recomeçar</button>
-        </div>
+    <div id="passo6" class="passo">
+        <p>Você terá de lutar contra o irmão mais velho daquele homem e seus 5 aprendizes.</p>
+        <footer>Fim da História</footer>
+    </div>
 
-        <!-- Passo 7: Lutar -->
-        <div class="passo" id="passo-7">
-            <p>Você luta bravamente contra o irmão mais velho e os cinco aprendizes. O que você fará agora?</p>
-            <button class="btn-proximo" data-proximo="0">Recomeçar</button>
-        </div>
-    </main>
+    <div id="passo7" class="passo">
+        <p>Você segue seu caminho e continua sua jornada como samurai em busca de novos duelos.</p>
+        <footer>Fim da História</footer>
+    </div>
+</main>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
